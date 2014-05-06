@@ -13,7 +13,7 @@ document.body.appendChild(renderer.view);
 
 requestAnimFrame(animate);
 
-var texture = PIXI.Texture.fromImage('img/ghost.png');
+var texture = PIXI.Texture.fromImage('../assets/texture/ghost.png');
 var bunny = new PIXI.Sprite(texture);
 
 bunny.anchor.x = 0.5;

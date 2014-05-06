@@ -1,0 +1,4 @@
+var config =
+{
+  debug: true	
+};

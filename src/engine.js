@@ -5,7 +5,7 @@ if (config.debug)
   document.body.appendChild(stats.domElement);
 };
 
-var stage = new PIXI.Stage(0x66FF99);
+var stage = new PIXI.Stage(0xffffff);
 
 var renderer = PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight);
 
@@ -13,16 +13,16 @@ document.body.appendChild(renderer.view);
 
 requestAnimFrame(animate);
 
-var texture = PIXI.Texture.fromImage('../assets/texture/ghost.png');
-var bunny = new PIXI.Sprite(texture);
+for (var i = 0; i <= 5000; i++)
+{
+  var texture = PIXI.Texture.fromImage('../assets/texture/ghost.png');
+  var ghost = new PIXI.Sprite(texture);
 
-bunny.anchor.x = 0.5;
-bunny.anchor.y = 0.5;
+  ghost.position.x = 0;
+  ghost.position.y = 0;
 
-bunny.position.x = 500;
-bunny.position.y = 500;
-
-stage.addChild(bunny);
+  stage.addChild(ghost);
+};
 
 function animate()
 {
@@ -30,6 +30,12 @@ function animate()
     stats.begin();
 
   requestAnimFrame(animate);
+
+  for (var i = 0; i <= 100; i++)
+  {
+    stage.children[util.random(0, 5000)].position.x = util.random(0, 2000);
+    stage.children[util.random(0, 5000)].position.y = util.random(0, 1000);
+  };
 
   renderer.render(stage);
 

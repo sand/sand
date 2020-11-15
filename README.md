@@ -1,3 +1,3 @@
 sand
 ====
-A sandbox post apocalyptic game.
+A sandbox post apocalyptic game

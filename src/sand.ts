@@ -15,6 +15,7 @@ import {
   TorusKnotGeometry
 } from 'three';
 import controls, { initControls } from './client/core/controls';
+import { afterLoadInit, initEvents } from './client/core/initialization';
 
 function assignConfigFromOptions(options) {
   Object.keys(config).forEach(k => {
@@ -50,9 +51,9 @@ class Sand {
   
     container.canvas.appendChild(renderer.domElement);
   
-    // initEvents();
-    
-    tick();
+    initEvents();
+  
+    afterLoadInit();
     
     this._addModels();
     

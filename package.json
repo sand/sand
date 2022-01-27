@@ -41,6 +41,6 @@
     "@juggle/resize-observer": "^3.2.0",
     "postprocessing": "^6.20.1",
     "spatial-controls": "^3.0.6",
-    "three": "^0.125.2"
+    "three": "^0.137.0"
   }
 }
